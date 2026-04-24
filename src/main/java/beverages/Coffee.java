@@ -1,8 +1,14 @@
 package beverages;
 
-public class Coffee implements Beverage {
-    @Override
-    public double price() {
-        return 1.2;
+import java.util.Collections;
+import java.util.List;
+
+public class Coffee extends Beverage {
+    public Coffee() {
+        this(Collections.<Supplement>emptyList());
+    }
+
+    public Coffee(List<Supplement> supplements) {
+        super(1.2, supplements);
     }
 }
